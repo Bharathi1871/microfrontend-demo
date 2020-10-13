@@ -1,0 +1,17 @@
+{
+  "name": "micro-frontends",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently --names \"app-shell\" \"mfserve --listen 3000 --single app-shell\" \"wait-on http://localhost:3000 && opener http://localhost:3000\""
+  },
+  "author": "naltatis",
+  "license": "ISC",
+  "dependencies": {
+    "@microfrontends/serve": "^11.3.0",
+    "concurrently": "^5.2.0",
+    "opener": "^1.5.1",
+    "wait-on": "^5.0.1"
+  }
+}
